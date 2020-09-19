@@ -1,9 +1,9 @@
 package br.com.fiap.b2w.model;
 
+import br.com.fiap.b2w.enumeration.StatusTreinamentoEnum;
+
 import java.util.Date;
 import java.util.List;
-
-import br.com.fiap.b2w.enumeration.StatusTreinamentoEnum;
 
 public class Treinamento {
 	private int idTreinamento;
@@ -51,16 +51,43 @@ public class Treinamento {
 	public Treinamento(int numero, String temaTreinamento, String descricao, Date cargaHoraria, int usuario, Date dataInicio, Date dataFim, String instrutor, String conteudo, int arquivo, long setor, int statusTreinamentoEnum, Date dataHora, int totalTopicoDisponiveis, int totalPontosTreinamento, double progresso, int totalPontosTreinamento1) {
 	}
 
+	public Treinamento(int numero, int idTreinamento, String instrutor) {
+	}
 
-	public int getIdTreinamento() {
+	public Treinamento(int numero, Date cargaHoraria, int usuario, Date dataInicio, Date dataFim, String instrutor, String conteudo, long setor, int statusTreinamentoEnum, Date dataHora, int totalTopicoDisponiveis, int totalPontosTreinamento, double progresso, int totalDePontosTreinamentos) {
+	}
+
+	public Treinamento(int numero, int statusTreinamentoEnum) {
+	}
+
+	public Treinamento(int idTreinamento, String instrutor) {
+	}
+
+
+	public static int getIdTreinamento() {
 		return idTreinamento;
+	}
+
+	public static java.sql.Date getcargaHoraria() {
+	}
+
+	public static int getTreinamentoEnum() {
+	}
+
+	public static int getStatusTreinamentoEnum() {
+	}
+
+	public static int getTotalTopicoDisponiveis() {
+	}
+
+	public static double getTreinamentos() {
 	}
 
 	public void setIdTreinamento(int idTreinamento) {
 		this.idTreinamento = idTreinamento;
 	}
 
-	public List<Usuario> getUsuario() {
+	public static int getUsuario() {
 		return usuario;
 	}
 
@@ -68,7 +95,7 @@ public class Treinamento {
 		this.usuario = usuario;
 	}
 
-	public String getTemaTreinamento() {
+	public static String getTemaTreinamento() {
 		return temaTreinamento;
 	}
 
@@ -76,7 +103,7 @@ public class Treinamento {
 		this.temaTreinamento = temaTreinamento;
 	}
 
-	public String getDescricao() {
+	public static String getDescricao() {
 		return descricao;
 	}
 
@@ -92,7 +119,7 @@ public class Treinamento {
 		this.cargaHoraria = cargaHoraria;
 	}
 
-	public Date getDataInicio() {
+	public static java.sql.Date getDataInicio() {
 		return dataInicio;
 	}
 
@@ -100,7 +127,7 @@ public class Treinamento {
 		this.dataInicio = dataInicio;
 	}
 
-	public Date getDataFim() {
+	public static java.sql.Date getDataFim() {
 		return dataFim;
 	}
 
@@ -108,7 +135,7 @@ public class Treinamento {
 		this.dataFim = dataFim;
 	}
 
-	public String getInstrutor() {
+	public static String getInstrutor() {
 		return instrutor;
 	}
 
@@ -116,7 +143,7 @@ public class Treinamento {
 		this.instrutor = instrutor;
 	}
 
-	public String getConteudo() {
+	public static String getConteudo() {
 		return conteudo;
 	}
 
@@ -124,7 +151,7 @@ public class Treinamento {
 		this.conteudo = conteudo;
 	}
 
-	public Arquivo getArquivo() {
+	public static int getArquivo() {
 		return arquivo;
 	}
 
@@ -132,7 +159,7 @@ public class Treinamento {
 		this.arquivo = arquivo;
 	}
 
-	public Setor getSetor() {
+	public static long getSetor() {
 		return setor;
 	}
 
@@ -156,12 +183,12 @@ public class Treinamento {
 		this.dataHora = data;
 	}
 
-	public double getProgresso() {
+	public static double getProgresso() {
 		Treinamento.progresso = totalTopicosVisualizados / totalTopicosDisponiveis * 100;
 		return progresso;
 	}
 
-	public Date getDataHora() {
+	public static java.sql.Date getDataHora() {
 		return dataHora;
 	}
 
@@ -185,7 +212,7 @@ public class Treinamento {
 		this.totalTopicosVisualizados = totalTopicosVisualizados;
 	}
 
-	public static double getTotalDePontosTreinamento() {
+	public static int getTotalDePontosTreinamento() {
 		return totalDePontosTreinamento;
 	}
 

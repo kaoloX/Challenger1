@@ -28,10 +28,11 @@ public enum StatusTreinamentoEnum {
 		this.statusTreinamentoDescricao = statusTreinamentoDescricao;
 	}
 
-}
+
 		@Override
 		public int toint () {
 			return int.format ("Status do Treinamento: 1 -> Status do Treinamento Descrição: Andamento " +
 		"Status do treinamento: 2 -> Status do Treinamento Descricao: Espera -> Status do Treinamento: 3 ->" +
 		"Status do Treinamento Descrição: Concluido ", statusTreinamentoId, statusTreinamentoDescricao );
 		}
+}

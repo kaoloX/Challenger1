@@ -43,5 +43,8 @@ package br.com.fiap.b2w.enumeration;
 					"Tipo de usuário: 4 -> Tipo de usuario Descricao: Associado ", tipoUsuarioId, tipoUsuarioDescricao);
 		}
 
+		private void toInt(String s, int tipoUsuarioId, String tipoUsuarioDescricao) {
+		}
+
 	
 

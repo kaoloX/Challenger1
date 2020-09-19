@@ -1,9 +1,14 @@
 package br.com.fiap.b2w.model;
 
-import java.util.List;
 import br.com.fiap.b2w.enumeration.UsuarioEnum;
+import java.util.List;
+import java.lang.String;
 
 public class Usuario {
+	private static int idUsuario;
+	private static Setor setor;
+	private static String senha;
+	public int getLogin;
 	private int idUsuario;
 	private String nome;
 	private String login;
@@ -13,8 +18,11 @@ public class Usuario {
 	private UsuarioEnum tipoUsuario;
 	private boolean status;
 	private double totalPontos;
-	
-	public Usuario(String login, String senha, Setor setor, UsuarioEnum tipoUsuario, boolean status) {
+
+
+	public Usuario( int idUsuario, String nome, String login, String senha, Setor setor, boolean status) {
+		super();
+		this.nome = nome;
 		this.login = login;
 		this.senha = senha;
 		this.setor = setor;
@@ -22,13 +30,11 @@ public class Usuario {
 		this.status = status;
 	}
 
-	public Usuario(String nome, String login, String senha, Setor setor, UsuarioEnum tipoUsuario, boolean status) {
-		this(login, senha, setor, tipoUsuario, status);
-		this.nome = nome;
-	}
 
 	public Usuario(int idUsuario, String nome, String login, String senha, String setor, int idTreinamento, int tipoDoUsuarioEnum, boolean status, double totalPontos) {
+		this(idUsuario, nome, login, senha, setor, status);
 	}
+
 
 	public Usuario(int idUsuario, int idTreinamento, int tipoDoUsuarioEnum) {
 	}
@@ -39,18 +45,41 @@ public class Usuario {
 	public Usuario(int idUsuario, String setor, int idTreinamento, int tipoDoUsuarioEnum, boolean status, double totalPontos) {
 	}
 
+	public Usuario(int idUsuario, String nome, String login, String senha, String setor, boolean status) {
+	}
+
+	public Usuario(int idUsuario) {
+	}
+
+	public Usuario() {
+
+	}
+
+
 	public static Usuario valueOf(String usuario) {
 	}
 
-	public int getIdUsuario() {
+	public static int getIdUsuario() {
 		return idUsuario;
+	}
+
+	public static int getIdTreinamento() {
+	}
+
+	public static int getTipoDoUsuario() {
+	}
+
+	public static int getTipoDoUsuarioEnum() {
+	}
+
+	public static boolean getStatus() {
 	}
 
 	public void setIdUsuario(int idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 
-	public double getTotalPontos() {
+	public static double getTotalPontos() {
 		return totalPontos;
 	}
 
@@ -66,10 +95,8 @@ public class Usuario {
 		this.treinamentos = treinamentos;
 	}
 
-	public Usuario() {
-	}
 	
-	public String getNome() {
+	public static String getNome() {
 		return nome;
 	}
 
@@ -77,7 +104,7 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public String getLogin() {
+	public static String getLogin() {
 		return login;
 	}
 
@@ -85,7 +112,7 @@ public class Usuario {
 		this.login = login;
 	}
 
-	public String getSenha() {
+	public static String getSenha() {
 		return senha;
 	}
 
@@ -93,7 +120,7 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public Setor getSetor() {
+	public static String getSetor() {
 		return setor;
 	}
 
@@ -141,5 +168,10 @@ public class Usuario {
 		// TODO:
 		return 0;
 	}
-	
+
+	public void setId(int id) {
+	}
+
+	public void add(Usuario usuario) {
+	}
 }
